@@ -1,0 +1,35 @@
+.learn
+  &-list 
+    display: flex
+    flex-direction: column
+    align-items: center
+    +laptop 
+      flex-direction: row 
+      justify-content: center
+      // gap: 100px
+      flex-wrap: wrap
+    &-item 
+      max-width: 311px
+      +laptop 
+        position: relative
+        margin-bottom: 42px
+        margin-inline: 32px
+      & h4 
+        display: flex
+        align-items: center
+        font-size: 24px
+        margin-bottom: 14px
+        +laptop 
+          font-size: 28px
+      & img 
+        margin-right: 9.5px
+        width: 21px
+        +laptop 
+          position: absolute
+          top: 42px
+          left: -30px
+          width: 24px
+      & p 
+        font-size: 16px
+        +laptop 
+          font-size: 18px

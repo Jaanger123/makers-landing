@@ -1,0 +1,115 @@
+.header 
+  background-image: url('../../../media/wall.png')
+  height: 700px
+  background-size: cover
+  overflow: hidden
+  +tablet 
+    height: 842px
+  &-logo
+    margin: 46px auto
+    margin-bottom: 0
+    width: 107px
+    +laptop
+      width: 142px
+      margin-left: 146px
+      margin-right: 0
+    & img 
+      width: 100%
+  &-title 
+    font-size: 28px
+    text-align: center
+    margin-top: 38px
+    color: white
+    +laptop
+      font-size: 64px
+      margin-top: 100px
+    & span
+      background: $mainGradient
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      background-clip: text
+      text-fill-color: transparent
+  &-info 
+    text-align: center
+    color: white
+    max-width: 260px
+    margin: 0 auto
+    font-size: 18px
+    margin-bottom: 50px
+    +tablet 
+      max-width: 500px
+    +laptop
+      margin-bottom: 30px
+  &-list 
+    color: white
+    max-width: 260px
+    list-style-type: none
+    margin: 0 auto 
+    display: flex
+    flex-direction: column 
+    align-items: center
+    padding: 0
+    gap: 18px
+    +laptop
+      flex-direction: row
+      justify-content: center
+      align-items: center
+      gap: 50px
+    &-item 
+      display: flex
+      align-items: center
+      gap: 13px
+      +laptop 
+        display: flex
+        align-items: center
+        min-width: 245px
+        gap: 13px
+      & div 
+        margin-top: -3px
+  &-bottom 
+    display: flex
+    flex-direction: column
+    gap: 18px
+    align-items: center
+    margin-top: 100px
+   
+    &-text 
+      color: white
+      font-size: 14px
+      font-weight: 700
+      +laptop
+        font-size: 18px
+    & a 
+      text-decoration: none
+    &-btn 
+      background-image: linear-gradient(92.39deg, #8F00FF 31.24%, #C77EFF 86.36%)
+      border-radius: 25px
+      padding: 19px 46px
+      border: none
+      display: block
+      text-decoration: none
+      color: white
+      transition: 1s
+      cursor: pointer
+      +tablet 
+        display: block
+      &:hover 
+        background-image: linear-gradient(92.39deg, #6004a7 31.24%, #7936ac 86.36%)
+    &-btn2
+      background: linear-gradient(92.39deg, #8F00FF 31.24%, #C77EFF 86.36%)
+      border-radius: 25px
+      padding: 19px 46px
+      border: none
+      color: white
+      margin: 11px auto
+      width: 100%
+      padding: 11px
+      text-align: center
+      cursor: pointer
+      +tablet 
+        display: none
+      &:hover 
+        background-image: linear-gradient(92.39deg, #6004a7 31.24%, #7936ac 86.36%)
+
+.solobtn
+  padding: 0 20px

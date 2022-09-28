@@ -1,0 +1,55 @@
+.register
+  &-title 
+    font-size: 28px
+    margin-top: 70px
+    margin-bottom: 8px
+    margin-inline: 20px
+    +phone 
+      text-align: center
+    +laptop 
+      font-size: 54px
+      margin-bottom: 24px
+  &-text 
+    margin: 0
+    margin-inline: 20px
+    max-width: 335px
+    font-size: 16px
+    +phone 
+      text-align: center
+      margin-inline: auto
+    +laptop 
+      margin-bottom: 10px
+  &-form 
+    display: flex
+    flex-direction: column
+    gap: 18px
+    padding: 20px
+    +phone 
+      align-items: center
+    +laptop 
+      gap: 24px
+  &-input 
+    width: 80%
+    max-width: 335px
+    border: 0.4px solid #000000
+    border-radius: 12px
+    padding: 17px 15px
+    +laptop 
+      padding: 20px 30px
+      max-width: 585px
+    &::placeholder
+      font-size: 16px
+      line-height: 105%
+      font-weight: 400
+      color: #808080
+  &-btn 
+    border-radius: 25px
+    background: $mainGradient
+    color: white
+    border: none 
+    display: block
+    padding: 19px 46px 
+    font-size: 16px
+    max-width: 228px
+    margin: 10px auto
+    margin-bottom: 70px
