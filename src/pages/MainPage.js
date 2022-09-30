@@ -1,37 +1,53 @@
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Modal from '../components/Modal';
 
 import './css/main.css';
 
 const MainPage = () => {
-    const modal = useRef();
+    const [error, setError] = useState('');
 
     const register = (e) => {
         e.preventDefault();
         const form = e.target;
+        let check = true;
 
-        const name = form[0].value;
-        const number = form[1].value;
-        const email = form[2].value;
+        const password = form[4];
+        const passwordConfirmation = form[5];
+        const select = form[6];
 
-        form.reset();
-        console.log(name, number, email);
-    };
+        for (let input in form) {
+            if (
+                Number.isInteger(+input) &&
+                form[input].className.includes('register-input') &&
+                !form[input].value
+            ) {
+                form[input].classList.add('incorrect-field');
+                check = false;
+                // form[input].addEventListener('focus', (e) => {
+                //     e.target.classList.remove('incorrect-field');
+                // });
+                form[input].setAttribute('dataError');
+            }
+        }
 
-    const openModal = () => {
-        modal.current.style.display = 'block';
-    };
-
-    const closeModal = () => {
-        modal.current.style.display = 'none';
-    };
-
-    window.onclick = (e) => {
-        if (e.target === modal.current) {
-            modal.current.style.display = 'none';
+        if (password.value === passwordConfirmation.value) {
+            const userData = {
+                name: form[0].value,
+                lastName: form[1].value,
+                telegramNick: form[2].value,
+                email: form[3].value,
+                password: password.value,
+                stack: select.value,
+            };
+            console.log(userData, e);
+        } else {
+            setError('Пароли не совпадают');
+        }
+        if (check) {
+            select.value = select[0].value;
+            form.reset();
         }
     };
 
@@ -307,8 +323,9 @@ const MainPage = () => {
                         <div className="name-wrapper">
                             <label htmlFor="name">Ваше имя:</label>
                             <input
+                                // required
+                                dataError="Введите имя"
                                 type="text"
-                                required
                                 placeholder="Азамат"
                                 className="register-input"
                                 id="name"
@@ -317,8 +334,9 @@ const MainPage = () => {
                         <div className="last_name-wrapper">
                             <label htmlFor="last_name">Ваша фамилия:</label>
                             <input
+                                // required
+                                dataError="Введите фамилию"
                                 type="text"
-                                required
                                 placeholder="Торокулов"
                                 className="register-input"
                                 id="last_name"
@@ -330,8 +348,9 @@ const MainPage = () => {
                             Ваш ник в телеграме:
                         </label>
                         <input
+                            // required
+                            dataError="Введите ник в телеграме"
                             type="text"
-                            required
                             placeholder="@example"
                             className="register-input"
                             id="telegram-nick"
@@ -340,8 +359,9 @@ const MainPage = () => {
                     <div className="register-input-wrapper">
                         <label htmlFor="email">Ваша электронная почта:</label>
                         <input
+                            // required
                             type="email"
-                            required
+                            dataError="Введите электронную почту"
                             placeholder="example@gmail.com"
                             className="register-input"
                             id="email"
@@ -350,9 +370,10 @@ const MainPage = () => {
                     <div className="register-input-wrapper">
                         <label htmlFor="password">Введите пароль:</label>
                         <input
+                            // required
+                            dataError="Введите пароль"
                             type="password"
-                            required
-                            placeholder="password"
+                            placeholder="Password"
                             className="register-input"
                             id="password"
                         />
@@ -362,34 +383,32 @@ const MainPage = () => {
                             Подтвердите пароль:
                         </label>
                         <input
+                            // required
+                            dataError="Подтвердите пароль"
                             type="password"
-                            required
-                            placeholder="password"
+                            placeholder="Password"
                             className="register-input"
                             id="password-confirmation"
                         />
+                        <span className="error">{error}</span>
                     </div>
                     <div className="register-input-wrapper">
                         <label htmlFor="stack">Выберите стэк:</label>
-
-                        <select name="stack" id="stack" required>
-                            <option value="default" disabled selected hidden>
-                                Выберите стэк
-                            </option>
-                            <option value="volvo">JavaScript</option>
-                            <option value="saab">Python</option>
+                        <select
+                            name="stack"
+                            id="stack"
+                            defaultValue="none"
+                            // required
+                        >
+                            <option disabled>Выберите стэк</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="Python">Python</option>
                         </select>
                     </div>
                     <button className="register-btn">Зарегистрироваться</button>
                 </form>
             </section>
             <Footer />
-            {/* <div id="myModal" className="modal" ref={modal}>
-                <Modal closeModal={closeModal} />
-            </div>
-            <div id="myBtn" className="bell" onClick={openModal}>
-                <img src={require('../media/bell.png')} alt="bell" />
-            </div> */}
         </div>
     );
 };

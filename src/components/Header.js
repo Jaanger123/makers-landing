@@ -4,10 +4,7 @@ const Header = () => {
     return (
         <header className="header">
             <div className="header-logo">
-                <img
-                    src={require('../media/logo_svg.svg').default}
-                    alt="makers"
-                />
+                <img src={require('../media/logo_juniors.png')} alt="makers" />
             </div>
             <h1 className="header-title">
                 Прокачка до уровня{' '}

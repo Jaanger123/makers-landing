@@ -6,7 +6,7 @@ const Footer = () => {
             <div className="footer-wrap container">
                 <div className="footer-left">
                     <img
-                        src={require('../media/logo_png.png').default}
+                        src={require('../media/logo_juniors.png')}
                         alt="logo"
                     />
                     <div className="footer-left-copy">
@@ -14,7 +14,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="footer-right">
-                    <div className="footer-right-telwrap">
+                    {/* <div className="footer-right-telwrap">
                         <a
                             href="tel:+996704409409"
                             className="footer-right-phone"
@@ -27,13 +27,13 @@ const Footer = () => {
                         >
                             +996 704 409 409
                         </a>
-                    </div>
+                    </div> */}
                     <p className="footer-right-address">
                         Табышалиева 29, Bishkek Kyrgyzstan
                     </p>
                     <div className="footer-right-icon-wrap">
                         <a
-                            href="https://www.instagram.com/makerskg/?hl=en"
+                            href="https://www.instagram.com/juniors.dev/"
                             className="icon"
                         >
                             <img
@@ -41,13 +41,13 @@ const Footer = () => {
                                 alt="insta"
                             />
                         </a>
-                        <a href="https://t.me/makers_kg" className="icon">
+                        <a href="https://t.me/juniors_dev" className="icon">
                             <img
                                 src={require('../media/telegram.svg').default}
                                 alt="telegram"
                             />
                         </a>
-                        <a
+                        {/* <a
                             href="https://www.instagram.com/makerskg/?hl=en"
                             className="icon"
                         >
@@ -58,10 +58,10 @@ const Footer = () => {
                                 }
                                 alt="email"
                             />
-                        </a>
+                        </a> */}
                     </div>
                     <div className="footer-right-copy">
-                        &copy; 2022 makers. All rights reserved
+                        &copy; 2022 juniors. All rights reserved
                     </div>
                 </div>
             </div>
