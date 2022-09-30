@@ -38,78 +38,6 @@ const MainPage = () => {
     return (
         <div>
             <Header />
-
-            <section className="learn container">
-                <h2 className="learn-title title">
-                    Прокачка до уровня{' '}
-                    <span className="glow-text">strong junior</span> на проектах
-                </h2>
-                <p className="learn-info">
-                    Дружелюбное сообщество начинающих junior программистов
-                </p>
-                <ul className="learn-list">
-                    <li className="learn-list-item">
-                        <div className="learn-list-item-wrapper">
-                            <img
-                                src={require('../media/check.svg').default}
-                                alt="check"
-                            />
-                            <h4 className="learn-list-item-title">
-                                До трудоустройства
-                            </h4>
-                        </div>
-                        <p>
-                            Мы с вами до конца, пока вы не будете готовы начать
-                            работать
-                        </p>
-                    </li>
-                    <li className="learn-list-item">
-                        <div className="learn-list-item-wrapper">
-                            <img
-                                src={require('../media/check.svg').default}
-                                alt="check"
-                            />
-                            <h4 className="learn-list-item-title">
-                                Проекты от компаний
-                            </h4>
-                        </div>
-                        <p>
-                            Проекты и технологии подтверждены реальными IT
-                            компаниями
-                        </p>
-                    </li>
-                    <li className="learn-list-item">
-                        <div className="learn-list-item-wrapper">
-                            <img
-                                src={require('../media/check.svg').default}
-                                alt="check"
-                            />
-                            <h4 className="learn-list-item-title">
-                                Качаем hard и soft скиллы
-                            </h4>
-                        </div>
-                        <p>
-                            Реализация совместных проектов, работа в паре и
-                            командах
-                        </p>
-                    </li>
-                    <li className="learn-list-item">
-                        <div className="learn-list-item-wrapper">
-                            <img
-                                src={require('../media/check.svg').default}
-                                alt="check"
-                            />
-                            <h4 className="learn-list-item-title">
-                                Готовим к собеседованиям
-                            </h4>
-                        </div>
-                        <p>
-                            Парные интервью помогут вам подготовиться к реальным
-                            собеседованиям.
-                        </p>
-                    </li>
-                </ul>
-            </section>
             <section className="events container">
                 <h2 className="events-title title">
                     Вас ждут классные проекты 💎
@@ -340,91 +268,128 @@ const MainPage = () => {
             </section>
             <section className="offer">
                 <div className="offer-title-wrap">
-                    <h2 className="offer-title-1">СПЕЦИАЛЬНОЕ</h2>
-                    <h2 className="offer-title-2">ПРЕДЛОЖЕНИЕ</h2>
+                    <h2 className="offer-title-1">СТОИМОСТЬ</h2>
                 </div>
 
                 <p className="offer-text">
-                    Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis
-                    ullamco cillum dolor.
-                    <span>
-                        Voluptate exercitation incididunt aliquip deserunt
-                        reprehenderit elit laborum.
-                    </span>
+                    Вы платите только за вход. Только один раз. Других
+                    обязательных платежей нет.
                 </p>
-                <ul className="offer-list">
-                    <li className="offer-list-item">
-                        <img
-                            src={require('../media/star.svg').default}
-                            alt="star"
-                        />
-                        onsequat sunt nostrud amet.
-                    </li>
-                    <li className="offer-list-item">
-                        <img
-                            src={require('../media/star.svg').default}
-                            alt="star"
-                        />
-                        onsequat sunt nostrud amet.
-                    </li>
-                    <li className="offer-list-item">
-                        <img
-                            src={require('../media/star.svg').default}
-                            alt="star"
-                        />
-                        onsequat sunt nostrud amet.
-                    </li>
-                </ul>
+                <div className="offer-cost">
+                    <p className="offer-cost-desc">
+                        <span className="glow-text offer-big">Pre-junior</span>
+                        <br />
+                        Единоразовая оплата до трудоустройства
+                        <br />
+                        <span className="glow-text offer-big">$10</span> / до
+                        трудоустройства
+                    </p>
+                    <p>
+                        <span className="offer-big">Наши реквизиты:</span>
+                        <br />
+                        Элсом: 0501619690
+                        <br />
+                        Мбанк: 0703666656
+                    </p>
+                </div>
                 <a style={{ textDecoration: 'none' }} href="#reg">
                     <button className="offer-btn">Принять участие</button>
                 </a>
             </section>
             <section id="reg" className="register">
                 <h2 className="register-title">Регистрация</h2>
-                {/* <p className="register-text">Начать прокачку прямо сейчас</p> */}
                 <form
                     action="submit"
                     className="register-form"
                     onSubmit={register}
                 >
+                    <div className="register-input-wrapper name-last_name">
+                        <div className="name-wrapper">
+                            <label htmlFor="name">Ваше имя:</label>
+                            <input
+                                type="text"
+                                required
+                                placeholder="Азамат"
+                                className="register-input"
+                                id="name"
+                            />
+                        </div>
+                        <div className="last_name-wrapper">
+                            <label htmlFor="last_name">Ваша фамилия:</label>
+                            <input
+                                type="text"
+                                required
+                                placeholder="Торокулов"
+                                className="register-input"
+                                id="last_name"
+                            />
+                        </div>
+                    </div>
                     <div className="register-input-wrapper">
-                        <label htmlFor="name">Ваше имя</label>
+                        <label htmlFor="telegram-nick">
+                            Ваш ник в телеграме:
+                        </label>
                         <input
                             type="text"
                             required
-                            placeholder="Азамат"
-                            className="register-input input1"
-                            id="name"
+                            placeholder="@example"
+                            className="register-input"
+                            id="telegram-nick"
                         />
                     </div>
                     <div className="register-input-wrapper">
-                        <label htmlFor="last-name">Ваша фамилия</label>
-                        <input
-                            type="text"
-                            required
-                            placeholder="Торокулов"
-                            className="register-input input2"
-                            id="last-name"
-                        />
-                    </div>
-                    <div className="register-input-wrapper">
-                        <label htmlFor="name">Ваша электронная почта</label>
+                        <label htmlFor="email">Ваша электронная почта:</label>
                         <input
                             type="email"
+                            required
                             placeholder="example@gmail.com"
-                            className="register-input input3"
+                            className="register-input"
+                            id="email"
                         />
+                    </div>
+                    <div className="register-input-wrapper">
+                        <label htmlFor="password">Введите пароль:</label>
+                        <input
+                            type="password"
+                            required
+                            placeholder="password"
+                            className="register-input"
+                            id="password"
+                        />
+                    </div>
+                    <div className="register-input-wrapper">
+                        <label htmlFor="password-confirmation">
+                            Подтвердите пароль:
+                        </label>
+                        <input
+                            type="password"
+                            required
+                            placeholder="password"
+                            className="register-input"
+                            id="password-confirmation"
+                        />
+                    </div>
+                    <div className="register-input-wrapper">
+                        <label htmlFor="stack">Выберите стэк:</label>
+
+                        <select name="stack" id="stack" required>
+                            <option value="default" disabled selected hidden>
+                                Выберите стэк
+                            </option>
+                            <option value="volvo">JavaScript</option>
+                            <option value="saab">Python</option>
+                        </select>
                     </div>
                     <button className="register-btn">Зарегистрироваться</button>
                 </form>
             </section>
             <Footer />
-            <div id="myModal" className="modal" ref={modal}>
+            {/* <div id="myModal" className="modal" ref={modal}>
                 <Modal closeModal={closeModal} />
             </div>
             <div id="myBtn" className="bell" onClick={openModal}>
                 <img src={require('../media/bell.png')} alt="bell" />
-            </div>
+            </div> */}
         </div>
     );
 };

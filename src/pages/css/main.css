@@ -47,16 +47,10 @@ ul {
 
 .header {
     background-image: url('../../media/wall.png');
-    /* height: 700px; */
     background-size: cover;
     overflow: hidden;
     padding: 0 5%;
 }
-/* @media screen and (min-width: 768px) {
-    .header {
-        height: 842px;
-    }
-} */
 .header-logo {
     margin: 46px auto;
     margin-bottom: 0;
@@ -73,7 +67,7 @@ ul {
     width: 100%;
 }
 .header-title {
-    font-size: 32px;
+    font-size: 30px;
     text-align: left;
     margin-top: 38px;
     color: white;
@@ -85,14 +79,14 @@ ul {
 }
 @media screen and (min-width: 768px) {
     .header-title {
-        font-size: 48px;
-        margin-top: 66px;
+        font-size: 52px;
+        margin-top: 40px;
     }
 }
 @media screen and (min-width: 992px) {
     .header-title {
         font-size: 64px;
-        margin-top: 100px;
+        margin-top: 60px;
     }
 }
 .glow-text {
@@ -105,78 +99,124 @@ ul {
 .header-info {
     text-align: left;
     color: white;
-    max-width: 260px;
+    max-width: 400px;
     font-size: 16px;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
     .header-info {
+        margin-bottom: 100px;
         max-width: 500px;
-        font-size: 18px;
+        font-size: 22px;
     }
 }
 @media screen and (min-width: 992px) {
     .header-info {
-        margin-bottom: 30px;
+        margin-bottom: 100px;
         font-size: 26px;
     }
 }
 .header-list {
-    color: white;
-    max-width: 260px;
-    list-style-type: none;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 0;
-    gap: 18px;
+    color: #ffffff;
 }
 @media screen and (min-width: 992px) {
     .header-list {
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 50px;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 }
 .header-list-item {
-    display: flex;
-    align-items: center;
-    gap: 13px;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+@media screen and (max-width: 991px) {
+    .header-list-item {
+        min-width: 600px;
+    }
+}
+@media screen and (max-width: 678px) {
+    .header-list-item {
+        min-width: auto;
+    }
+}
+@media screen and (min-width: 768px) {
+    .header-list-item {
+        margin-bottom: 46px;
+    }
 }
 @media screen and (min-width: 992px) {
     .header-list-item {
-        display: flex;
-        align-items: center;
-        min-width: 245px;
-        gap: 13px;
+        position: relative;
+        margin-inline: 12px;
+        max-width: 500px;
+        margin-top: 10px;
     }
 }
-.header-list-item div {
-    margin-top: -3px;
+@media screen and (max-width: 1172px) {
+    .header-list-item {
+        max-width: 400px;
+    }
+}
+@media screen and (min-width: 1302px) {
+    .header-list-item {
+        position: relative;
+        margin-inline: 26px;
+        max-width: 240px;
+    }
+}
+.header-list-item-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.header-list-item h4 {
+    font-size: 16px;
+    margin: 0;
+}
+@media screen and (min-width: 768px) {
+    .header-list-item h4 {
+        font-size: 24px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .header-list-item h4 {
+        font-size: 22px;
+    }
+}
+.header-list-item p {
+    font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+    .header-list-item p {
+        font-size: 18px;
+    }
+}
+.header-list-item img {
+    margin-right: 9.5px;
+    width: 21px;
+}
+@media screen and (min-width: 992px) {
+    .header-list-item img {
+        position: absolute;
+        top: 3px;
+        left: -30px;
+        width: 24px;
+    }
 }
 .header-bottom {
     display: flex;
     flex-direction: column;
     gap: 18px;
     align-items: center;
-    margin-top: 140px;
-    margin-bottom: 5em;
+    margin-top: 30px;
+    margin-bottom: 4em;
 }
 @media screen and (min-width: 768px) {
     .header-bottom {
-        margin-top: 80px;
-    }
-}
-.header-bottom-text {
-    color: white;
-    font-size: 14px;
-    font-weight: 700;
-}
-@media screen and (min-width: 992px) {
-    .header-bottom-text {
-        font-size: 18px;
+        margin-top: 50px;
     }
 }
 .header-bottom a {
@@ -229,90 +269,6 @@ ul {
 .solobtn {
     padding: 0 20px;
 }
-
-.learn-info {
-    text-align: center;
-    margin: 0 auto;
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 50px;
-}
-
-@media screen and (min-width: 992px) {
-    .learn-info {
-        margin-bottom: 100px;
-        font-size: 22px;
-    }
-}
-
-.learn-list {
-    display: flex;
-    flex-direction: column;
-}
-@media screen and (min-width: 992px) {
-    .learn-list {
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-}
-@media screen and (max-width: 992px) {
-    .learn-list {
-        align-items: center;
-    }
-}
-.learn-list-item {
-    /* max-width: 311px; 311px */
-    margin-bottom: 30px;
-}
-@media screen and (min-width: 992px) {
-    .learn-list-item {
-        position: relative;
-        margin-bottom: 42px;
-        margin-inline: 26px;
-        max-width: 241px;
-    }
-}
-@media screen and (max-width: 1172px) {
-    .learn-list-item {
-        max-width: 350px;
-    }
-}
-.learn-list-item-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-.learn-list-item h4 {
-    font-size: 24px;
-    margin: 0;
-}
-@media screen and (min-width: 992px) {
-    .learn-list-item h4 {
-        font-size: 22px;
-    }
-}
-.learn-list-item img {
-    margin-right: 9.5px;
-    width: 21px;
-}
-@media screen and (min-width: 992px) {
-    .learn-list-item img {
-        position: absolute;
-        top: 3px;
-        left: -30px;
-        width: 24px;
-    }
-}
-.learn-list-item p {
-    font-size: 18px;
-}
-@media screen and (min-width: 992px) {
-    .learn-list-item p {
-        font-size: 18px;
-    }
-}
-
 .events {
     margin-bottom: 80px;
 }
@@ -346,7 +302,7 @@ ul {
 }
 .events-list-item {
     background: #ffffff;
-    box-shadow: 0px 4px 100px rgba(0, 0, 0, 0.07);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.07);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -354,6 +310,11 @@ ul {
     padding: 30px;
     padding-bottom: 40px;
     width: 285px;
+    transition: all 0.2s;
+}
+.events-list-item:hover {
+    transform: scale(1.025);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.07);
 }
 @media screen and (min-width: 992px) {
     .events-list-item {
@@ -617,6 +578,10 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: transform 0.2s;
+}
+.speak-list-item:hover {
+    transform: scale(1.025);
 }
 @media screen and (min-width: 992px) {
     .speak-list-item {
@@ -672,13 +637,23 @@ ul {
 .offer {
     background-image: url('../../media/wall2.png');
     background-size: cover;
-    height: 649px;
+    height: 560px;
     padding-top: 50px;
     background-position: right;
 }
+@media screen and (min-width: 416px) {
+    .offer {
+        height: 520px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .offer {
+        height: 660px;
+    }
+}
 @media screen and (min-width: 992px) {
     .offer {
-        height: 776px;
+        height: 740px;
     }
 }
 .offer-title-wrap {
@@ -686,33 +661,30 @@ ul {
     position: relative;
     margin: 0 auto;
 }
+@media screen and (min-width: 768px) {
+    .offer-title-wrap {
+        max-width: 385px;
+    }
+}
 @media screen and (min-width: 992px) {
     .offer-title-wrap {
         max-width: 556px;
     }
 }
 .offer-title-1 {
-    background: #ffffff;
-    transform: rotate(2deg);
+    background: linear-gradient(92.39deg, #8f00ff 31.24%, #c77eff 86.36%);
+    transform: rotate(-4deg);
     font-size: 28px;
     text-align: center;
+}
+@media screen and (min-width: 768px) {
+    .offer-title-1 {
+        font-size: 38px;
+    }
 }
 @media screen and (min-width: 992px) {
     .offer-title-1 {
         font-size: 48px;
-    }
-}
-.offer-title-2 {
-    background: linear-gradient(92.39deg, #8f00ff 31.24%, #c77eff 86.36%);
-    text-align: center;
-    transform: rotate(-2.23deg);
-    font-size: 28px;
-    margin-top: -22px;
-}
-@media screen and (min-width: 992px) {
-    .offer-title-2 {
-        font-size: 48px;
-        margin-top: -38px;
     }
 }
 .offer-text {
@@ -722,10 +694,12 @@ ul {
     margin-top: 50px;
     margin-bottom: 32px;
     padding-inline: 20px;
+    text-align: center;
 }
 @media screen and (min-width: 768px) {
     .offer-text {
         max-width: 385px;
+        font-size: 20px;
     }
 }
 @media screen and (min-width: 992px) {
@@ -734,34 +708,57 @@ ul {
         font-size: 24px;
     }
 }
-.offer-text span {
-    background: linear-gradient(92.39deg, #8f00ff 31.24%, #c77eff 86.36%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-}
-.offer-list {
-    color: white;
-    max-width: 333px;
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    gap: 18px;
+.offer-cost {
+    width: 70%;
+    max-width: 700px;
+    padding: 1.1em 1.4em;
+    background-color: #ffffff;
     margin: 0 auto;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: transform 0.3s;
+}
+.offer-cost:hover {
+    transform: scale(1.015);
 }
 @media screen and (min-width: 768px) {
-    .offer-list {
-        align-items: center;
-        margin: 0 auto;
+    .offer-cost {
+        font-size: 16px;
     }
 }
+@media screen and (min-width: 992px) {
+    .offer-cost {
+        font-size: 18px;
+    }
+}
+.offer-cost .offer-cost-desc {
+    margin-bottom: 2em;
+}
+.offer-cost .offer-big {
+    font-size: 18px;
+}
 @media screen and (min-width: 768px) {
-    .offer-list-item {
-        display: flex;
-        min-width: 234px;
-        gap: 13px;
+    .offer-cost .offer-big {
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .offer-cost .offer-big {
+        font-size: 22px;
+    }
+}
+.offer-cost p {
+    margin: 0;
+    line-height: 25px;
+}
+@media screen and (min-width: 768px) {
+    .offer-cost p {
+        line-height: 30px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .offer-cost p {
+        line-height: 35px;
     }
 }
 .offer-btn {
@@ -770,24 +767,31 @@ ul {
     color: white;
     border: none;
     display: block;
-    margin: 80px auto;
+    margin: 40px auto 0;
     padding: 1em 2.5em;
     font-size: 14px;
+    transition: transform 0.2s;
+}
+.offer-btn:hover {
+    background-image: linear-gradient(92.39deg, #6004a7 31.24%, #7936ac 86.36%);
+    transform: scale(1.05);
 }
 @media screen and (min-width: 768px) {
     .offer-btn {
+        margin-top: 60px;
         font-size: 18px;
     }
 }
 .register-title {
-    font-size: 28px;
+    font-size: 32px;
     margin-top: 70px;
     margin-bottom: 8px;
-    margin-inline: 20px;
+    margin-inline: 7%;
 }
 @media screen and (min-width: 480px) {
     .register-title {
         text-align: center;
+        font-size: 40px;
     }
 }
 @media screen and (min-width: 992px) {
@@ -796,77 +800,124 @@ ul {
         margin-bottom: 24px;
     }
 }
-.register-text {
-    margin: 0;
-    margin-inline: 20px;
-    max-width: 335px;
-    font-size: 16px;
-}
-@media screen and (min-width: 480px) {
-    .register-text {
-        text-align: center;
-        margin-inline: auto;
-    }
-}
-@media screen and (min-width: 992px) {
-    .register-text {
-        margin-bottom: 10px;
-    }
-}
 .register-form {
-    width: 35%;
+    width: 85%;
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 16px;
     padding: 20px;
     margin: auto;
 }
 @media screen and (min-width: 480px) {
     .register-form {
+        width: 35%;
         align-items: center;
         min-width: 400px;
     }
 }
 @media screen and (min-width: 992px) {
     .register-form {
-        gap: 24px;
+        gap: 20px;
     }
 }
 .register-input-wrapper {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.name-last_name {
+    flex-direction: column;
+    justify-content: space-between;
+}
+.name-last_name div {
+    width: 100%;
+}
+@media screen and (min-width: 425px) {
+    .name-last_name {
+        flex-direction: row;
+    }
+    .name-last_name div {
+        width: 47%;
+    }
+}
+@media screen and (max-width: 425px) {
+    .name-last_name {
+        gap: 16px;
+    }
+}
+.name-last_name input {
+    margin-top: 0.3em;
+}
+.register-input-wrapper label {
+    font-size: 16px;
+    margin-bottom: 0.3em;
+}
+@media screen and (min-width: 480px) {
+    .register-input-wrapper label {
+        font-size: 18px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .register-input-wrapper label {
+        font-size: 20px;
+    }
+}
+.register-input-wrapper select {
+    border: 0.4px solid #000000;
+    border-radius: 12px;
+    min-width: 160px;
+    width: 40%;
+    padding: 0.6em 0.8em;
+    font-size: 16px;
 }
 .register-input {
     box-sizing: border-box;
     width: 100%;
-    /* max-width: 335px; */
     border: 0.4px solid #000000;
     border-radius: 12px;
-    padding: 14px 12px;
-    font-size: 18px;
+    padding: 0.6em 0.8em;
+    font-size: 16px;
+    transition: box-shadow 0.2s;
 }
-@media screen and (min-width: 992px) {
+.register-input:focus,
+.register-input-wrapper select:focus {
+    outline: none;
+    border: 0.4px solid #8f00ff;
+    box-shadow: 0 0 2px #8f00ff;
+}
+@media screen and (min-width: 480px) {
     .register-input {
-        padding: 14px 18px;
-        /* max-width: 585px; */
+        font-size: 18px;
     }
 }
 .register-input::-moz-placeholder {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 105%;
     font-weight: 400;
     color: #808080;
 }
 .register-input:-ms-input-placeholder {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 105%;
     font-weight: 400;
     color: #808080;
 }
 .register-input::placeholder {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 105%;
     font-weight: 400;
     color: #808080;
+}
+@media screen and (min-width: 480px) {
+    .register-input::-moz-placeholder {
+        font-size: 18px;
+    }
+    .register-input:-ms-input-placeholder {
+        font-size: 18px;
+    }
+    .register-input::placeholder {
+        font-size: 18px;
+    }
 }
 .register-btn {
     border-radius: 25px;
@@ -876,7 +927,7 @@ ul {
     display: block;
     padding: 1em 2.5em;
     font-size: 14px;
-    margin: 10px auto;
+    margin: 20px auto;
     margin-bottom: 70px;
     cursor: pointer;
     transition: transform 0.2s;
@@ -884,6 +935,7 @@ ul {
 @media screen and (min-width: 768px) {
     .register-btn {
         font-size: 18px;
+        margin: 30px auto;
     }
 }
 .register-btn:hover {
@@ -909,6 +961,7 @@ ul {
     }
 }
 .footer-left img {
+    width: 200px;
     margin-bottom: 37px;
     margin-left: -1px;
 }

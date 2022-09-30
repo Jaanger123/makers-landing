@@ -1,3 +1,3 @@
-import auth from './firebaseAuthentication.js';
+// import auth from './firebaseAuthentication.js';
 
-export default auth;
+// export default auth;

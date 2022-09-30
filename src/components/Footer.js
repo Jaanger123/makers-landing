@@ -6,7 +6,7 @@ const Footer = () => {
             <div className="footer-wrap container">
                 <div className="footer-left">
                     <img
-                        src={require('../media/logo.svg').default}
+                        src={require('../media/logo_png.png').default}
                         alt="logo"
                     />
                     <div className="footer-left-copy">

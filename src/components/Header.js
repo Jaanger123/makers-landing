@@ -4,10 +4,13 @@ const Header = () => {
     return (
         <header className="header">
             <div className="header-logo">
-                <img src={require('../media/logo.svg').default} alt="makers" />
+                <img
+                    src={require('../media/logo_svg.svg').default}
+                    alt="makers"
+                />
             </div>
             <h1 className="header-title">
-                Прокачка до уровня <br />{' '}
+                Прокачка до уровня{' '}
                 <span className="glow-text">strong junior</span> на проектах
             </h1>
             <p className="header-info">
@@ -15,25 +18,63 @@ const Header = () => {
             </p>
             <ul className="header-list">
                 <li className="header-list-item">
-                    <img
-                        src={require('../media/star.svg').default}
-                        alt="star"
-                    />
-                    <div>onsequat sunt nostrud amet.</div>
+                    <div className="header-list-item-wrapper">
+                        <img
+                            src={require('../media/check.svg').default}
+                            alt="check"
+                        />
+                        <h4 className="header-list-item-title">
+                            До трудоустройства
+                        </h4>
+                    </div>
+                    <p>
+                        Мы с вами до конца, пока вы не будете готовы начать
+                        работать
+                    </p>
                 </li>
                 <li className="header-list-item">
-                    <img
-                        src={require('../media/star.svg').default}
-                        alt="star"
-                    />
-                    onsequat sunt nostrud amet.
+                    <div className="header-list-item-wrapper">
+                        <img
+                            src={require('../media/check.svg').default}
+                            alt="check"
+                        />
+                        <h4 className="header-list-item-title">
+                            Проекты от компаний
+                        </h4>
+                    </div>
+                    <p>
+                        Проекты и технологии подтверждены реальными IT
+                        компаниями
+                    </p>
                 </li>
                 <li className="header-list-item">
-                    <img
-                        src={require('../media/star.svg').default}
-                        alt="star"
-                    />
-                    onsequat sunt nostrud amet.
+                    <div className="header-list-item-wrapper">
+                        <img
+                            src={require('../media/check.svg').default}
+                            alt="check"
+                        />
+                        <h4 className="header-list-item-title">
+                            Качаем hard и soft скиллы
+                        </h4>
+                    </div>
+                    <p>
+                        Реализация совместных проектов, работа в паре и командах
+                    </p>
+                </li>
+                <li className="header-list-item">
+                    <div className="header-list-item-wrapper">
+                        <img
+                            src={require('../media/check.svg').default}
+                            alt="check"
+                        />
+                        <h4 className="header-list-item-title">
+                            Готовим к собеседованиям
+                        </h4>
+                    </div>
+                    <p>
+                        Парные интервью помогут вам подготовиться к реальным
+                        собеседованиям.
+                    </p>
                 </li>
             </ul>
             <div className="header-bottom">
