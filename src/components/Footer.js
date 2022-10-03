@@ -10,24 +10,10 @@ const Footer = () => {
                         alt="logo"
                     />
                     <div className="footer-left-copy">
-                        &copy; 2022 makers. All rights reserved
+                        &copy; 2022 juniors. All rights reserved
                     </div>
                 </div>
                 <div className="footer-right">
-                    {/* <div className="footer-right-telwrap">
-                        <a
-                            href="tel:+996704409409"
-                            className="footer-right-phone"
-                        >
-                            +996 704 409 409
-                        </a>
-                        <a
-                            href="tel:+996704409409"
-                            className="footer-right-phone"
-                        >
-                            +996 704 409 409
-                        </a>
-                    </div> */}
                     <p className="footer-right-address">
                         Табышалиева 29, Bishkek Kyrgyzstan
                     </p>
@@ -47,18 +33,6 @@ const Footer = () => {
                                 alt="telegram"
                             />
                         </a>
-                        {/* <a
-                            href="https://www.instagram.com/makerskg/?hl=en"
-                            className="icon"
-                        >
-                            <img
-                                src={
-                                    require('../media/Footer/Mini/Mail.svg')
-                                        .default
-                                }
-                                alt="email"
-                            />
-                        </a> */}
                     </div>
                     <div className="footer-right-copy">
                         &copy; 2022 juniors. All rights reserved
