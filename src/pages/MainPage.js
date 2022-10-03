@@ -264,11 +264,14 @@ const MainPage = () => {
                         Мбанк: 0703666656
                     </p>
                 </div>
-                <a style={{ textDecoration: 'none' }} href="#reg">
+                <a
+                    style={{ textDecoration: 'none' }}
+                    href="https://t.me/juniors_dev"
+                >
                     <button className="offer-btn">Принять участие</button>
                 </a>
             </section>
-            <RegisterForm />
+            {/* <RegisterForm /> */}
             <Footer />
         </div>
     );

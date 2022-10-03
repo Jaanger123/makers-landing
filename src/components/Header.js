@@ -75,7 +75,7 @@ const Header = () => {
                 </li>
             </ul>
             <div className="header-bottom">
-                <a href="#reg">
+                <a href="https://t.me/juniors_dev">
                     <button className="header-bottom-btn">
                         Начать прокачку прямо сейчас
                     </button>
