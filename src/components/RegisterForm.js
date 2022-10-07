@@ -253,7 +253,7 @@ const RegisterForm = () => {
                         <option value="Python">Python</option>
                     </select>
                 </div>
-                <button className="register-btn">Зарегистрироваться</button>
+                <button className="btn register-btn">Зарегистрироваться</button>
             </form>
         </section>
     );
